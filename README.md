@@ -36,8 +36,8 @@ python3 consumers/basic_consumer_davidrm.py
 
 After activating the virtual environment, install dependencies:
 
-Bash
-```pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
 ```
 
 ## Commit and Push the Changes
