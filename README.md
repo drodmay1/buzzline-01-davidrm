@@ -2,8 +2,6 @@
 
 This project demonstrates streaming analytics using Python with producer and consumer scripts. Below are details about the custom producer and consumer scripts added.
 
----
-
 ## Custom Producer Script
 
 The custom producer script generates random "buzz" messages and writes them to a log file.
@@ -13,18 +11,20 @@ The custom producer script generates random "buzz" messages and writes them to a
 Mac/Linux:
 ```bash
 source .venv/bin/activate
-python3 producers/basic_producer_davidrm.py
+python3 producers/basic_producer_davidrm.py`
+```
 
 ## Custom Consumer Script
 
 The custom consumer script reads log messages in real-time and processes them, monitoring for specific conditions.
 
-### Running the Custom Producer
+### Running the Custom Consumer
 
 Mac/Linux:
 ```bash
 source .venv/bin/activate
 python3 consumers/basic_consumer_davidrm.py
+```
 
 ## Requirements
 
@@ -36,9 +36,14 @@ python3 consumers/basic_consumer_davidrm.py
 
 After activating the virtual environment, install dependencies:
 
-pip install -r requirements.txt
+Bash
+```pip install -r requirements.txt
+```
 
-## Commit and push the changes
+## Commit and Push the Changes
 
-
-
+```bash
+git add
+git commit
+git push
+```
