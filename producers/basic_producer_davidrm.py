@@ -1,5 +1,5 @@
 """
-basic_generator_case.py
+basic_generator_davidrm.py
 
 Generate some streaming buzz messages. 
 """
@@ -10,8 +10,12 @@ Generate some streaming buzz messages.
 
 # Import packages from Python Standard Library
 import os
+import sys
 import random
 import time
+
+# Add the project root to the Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # Import external packages (must be installed in .venv first)
 from dotenv import load_dotenv
@@ -59,9 +63,10 @@ def get_message_interval() -> int:
 #####################################
 
 # Define some lists for generating buzz messages
-ADJECTIVES: list = ["amazing", "funny", "boring", "exciting", "weird"]
-ACTIONS: list = ["found", "saw", "tried", "shared", "loved"]
-TOPICS: list = ["a movie", "a meme", "an app", "a trick", "a story"]
+NAMES: list = ["Alex", "Taylor", "Jordan", "Morgan", "Riley"]
+ACTIONS: list = ["completed", "started", "paused", "reviewed", "approved"]
+TOPICS: list = ["a project", "a task", "an analysis", "a report", "a meeting"]
+ADJECTIVES: list = ["amazing", "challenging", "rewarding", "interesting", "productive"]
 
 #####################################
 # Define a function to generate buzz messages
@@ -80,10 +85,11 @@ def generate_messages():
     until we close the window or hit CTRL c (CMD c on Mac/Linux).
     """
     while True:
-        adjective = random.choice(ADJECTIVES)
+        name = random.choice(NAMES)
         action = random.choice(ACTIONS)
         topic = random.choice(TOPICS)
-        yield f"I just {action} {topic}! It was {adjective}."
+        adjective = random.choice(ADJECTIVES)
+        yield f"{name} just {action} {topic}! It was {adjective}."
 
 
 #####################################
